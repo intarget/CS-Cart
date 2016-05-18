@@ -14,12 +14,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		if (is_object($result)) {
 			if (($result->status == 'OK') && (isset($result->payload))) {
 				$intarget_id = db_get_row("SELECT * FROM ?:intarget");
-				$intarget_id = fn_intarget_script($intarget_id['project_id']);
-
-				if(empty($intarget_id)){
+				if(empty($intarget_id['project_id'])){
 					db_query("INSERT INTO ?:intarget ?e", array('project_id'=>$result->payload->projectId));
-				} else db_query("UPDATE ?:intarget SET ?e", array('project_id'=>$result->payload->projectId));
-
+				} else {
+					db_query("UPDATE ?:intarget SET `project_id`=".$result->payload->projectId);
+				}
 				if(!empty($result->payload->projectId)){
 					fn_set_notification('N', __('intarget'), __('intarget.success'));
 				} else fn_set_notification('E', __('intarget'), __('intarget.error_1'));

@@ -13,8 +13,8 @@ if ($mode == 'view' || $mode == 'quick_view') {
         (function(w, c) {
             w[c] = w[c] || [];
             w[c].push(function(inTarget) {
-                inTarget.event('item-view');
-                alert('item-view');
+                inTarget.event('cat-view');
+                alert('cat-view');
             });
         })(window, 'inTargetCallbacks');
         </script>
