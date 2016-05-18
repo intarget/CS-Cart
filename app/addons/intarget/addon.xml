@@ -42,16 +42,17 @@
                         <type>info</type>
                         <handler>fn_intarget_help4</handler>
                     </item>
-                    <item>DROP TABLE IF EXISTS ?:intarget;</item>
-                    <item>
-                        CREATE TABLE `?:intarget` (
-                        `project_id` int(11) unsigned NOT NULL,
-                        PRIMARY KEY  (`project_id`)
-                        ) Engine=MyISAM DEFAULT CHARSET UTF8;
-                    </item>
-                    <item for="uninstall">DROP TABLE IF EXISTS ?:intarget;</item>
                 </items>
             </section>
         </sections>
     </settings>
+    <queries>
+        <item for="install">
+            CREATE TABLE `?:intarget` (
+            `project_id` int(11) unsigned NOT NULL,
+            PRIMARY KEY (`project_id`)
+            ) Engine=MyISAM DEFAULT CHARSET UTF8;
+        </item>
+        <item for="uninstall">DROP TABLE IF EXISTS ?:intarget;</item>
+    </queries>
 </addon>

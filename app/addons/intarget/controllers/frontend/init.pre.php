@@ -10,4 +10,3 @@ use Tygh\Registry;
  */
 $intarget_code = fn_intarget_script();
 echo $intarget_code;
-
