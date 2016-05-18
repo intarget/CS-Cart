@@ -1,0 +1,93 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: cs-cart-latest\n"
+"Language-Team: Russian\n"
+"Language: ru_RU\n"
+
+msgctxt "Addons::name::intarget"
+msgid "intarget"
+msgstr "inTarget eCommerce"
+
+msgctxt "Addons::description::intarget"
+msgid "intarget desc"
+msgstr "Система аналитики для интернет-магазина, с возможностью отслеживать продажи и<br/>анализировать конверсии в реальном времени."
+
+msgctxt "Languages::intarget.auth"
+msgid "<a id=\"auth\" class=\"cm-ajax cm-comet btn btn-primary\" href=\"[reg_intarget]&url=[http_location]\" style=\"text-align:center;\">Auth</a>"
+msgstr "<a id=\"auth\" class=\"cm-ajax cm-comet btn btn-primary\" href=\"[reg_intarget]&url=[http_location]\"  style=\"text-align:center;\">Авторизация</a>"
+
+msgctxt "Languages::intarget.intarget_desc"
+msgid "Try inTarget eCommerce"
+msgstr "Оцените принципиально новый подход к просмотру статистики. Общайтесь со своей аудиторией, продавайте лучше, зарабатывайте больше. И все это бесплатно!"
+
+msgctxt "Languages::intarget.intarget_help1"
+msgid "Input values from <a href=\"https://intarget.ru\" \">inTarget</a>"
+msgstr "Введите email и ключ API из личного кабинета <a href=\"https://intarget.ru\" \">inTarget</a>"
+
+msgctxt "Languages::intarget.intarget_help2"
+msgid "Registration in <a href=\"https://intarget.ru\" target=\"_blank\">inTarget.ru</a>"
+msgstr "Если вы ещё не зарегистрировались в сервисе inTarget это можно сделать по ссылке <a href=\"https://intarget.ru\" target=\"_blank\">inTarget.ru</a>"
+
+msgctxt "Languages::intarget.intarget_help3"
+msgid "TechSupport <a href=\"mailto:plugins@intarget.ru\">plugins@intarget.ru</a>"
+msgstr "Служба технической поддержки <a href=\"mailto:plugins@intarget.ru\">plugins@intarget.ru</a>"
+
+msgctxt "Languages::intarget.intarget_help4"
+msgid "CS-Cart inTarget ver.1.0.0"
+msgstr "CS-Cart inTarget ver.1.0.0"
+
+msgctxt "Languages::intarget_auth_error"
+msgid "Auth Error"
+msgstr "Ошибка регистрации"
+
+msgctxt "Languages::intarget"
+msgid "inTarget"
+msgstr "inTarget"
+
+msgctxt "Languages::intarget.success"
+msgid "Success"
+msgstr "Поздравляем! Ваш сайт успешно привязан к аккаунту <a href=\"https://intarget.ru\" target=\"_blank\">inTarget.ru</a>."
+
+msgctxt "Languages::intarget.error_empty_fields"
+msgid "Error Empty Fields"
+msgstr "Заполните обязательные поля!"
+
+msgctxt "Languages::intarget.error_403"
+msgid "Error 403"
+msgstr "Введен неверный ключ API!"
+
+msgctxt "Languages::intarget.error_404"
+msgid "Error 404"
+msgstr "Данный email не зарегистрирован на сайте https://intarget.ru"
+
+msgctxt "Languages::intarget.error_500"
+msgid "Error 500"
+msgstr "Невозможно создать проект. Возможно, он уже создан."
+
+msgctxt "Languages::intarget.error_0"
+msgid "Error 0"
+msgstr "Неверный формат данных."
+
+msgctxt "Languages::intarget.error_1"
+msgid "Error 1"
+msgstr "Ошибка при сохранении данных модуля."
+
+msgctxt "SettingsSections::intarget::general"
+msgid "intarget Settings"
+msgstr "Настройки inTarget"
+
+msgctxt "SettingsOptions::intarget::intarget_email"
+msgid "intarget email"
+msgstr "Email"
+
+msgctxt "SettingsOptions::intarget::intarget_apikey"
+msgid "intarget apikey"
+msgstr "Ключ API"
+
+msgctxt "SettingsTooltips::intarget::intarget_email"
+msgid "intarget Email Tooltip"
+msgstr "Ваш Email в системе inTarget.ru"
+
+msgctxt "SettingsTooltips::intarget::intarget_apikey"
+msgid "intarget Api Key Tooltip"
+msgstr "Ваш Ключ API"

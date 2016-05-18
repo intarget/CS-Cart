@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<addon scheme="3.0">
+    <id>intarget</id>
+    <version>1.0</version>
+    <priority>10</priority>
+    <position>0</position>
+    <status>active</status>
+    <default_language>ru</default_language>
+    <auto_install>MULTIVENDOR,ULTIMATE</auto_install>
+    <compatibility>
+        <conflicts></conflicts>
+    </compatibility>
+    <settings>
+        <sections>
+            <section id="general">
+                <items>
+                    <item id="intarget_desc">
+                        <type>info</type>
+                        <handler>fn_intarget_decs</handler>
+                    </item>
+                    <item id="intarget_email">
+                        <type>input</type>
+                        <default_value/>
+                    </item>
+                    <item id="intarget_apikey">
+                        <type>input</type>
+                        <default_value/>
+                    </item>
+                    <item id="intarget_help1">
+                        <type>info</type>
+                        <handler>fn_intarget_help1</handler>
+                    </item>
+                    <item id="intarget_help2">
+                        <type>info</type>
+                        <handler>fn_intarget_help2</handler>
+                    </item>
+                    <item id="intarget_help3">
+                        <type>info</type>
+                        <handler>fn_intarget_help3</handler>
+                    </item>
+                    <item id="intarget_help4">
+                        <type>info</type>
+                        <handler>fn_intarget_help4</handler>
+                    </item>
+                    <item>DROP TABLE IF EXISTS ?:intarget;</item>
+                    <item>
+                        CREATE TABLE `?:intarget` (
+                        `project_id` int(11) unsigned NOT NULL,
+                        PRIMARY KEY  (`project_id`)
+                        ) Engine=MyISAM DEFAULT CHARSET UTF8;
+                    </item>
+                    <item for="uninstall">DROP TABLE IF EXISTS ?:intarget;</item>
+                </items>
+            </section>
+        </sections>
+    </settings>
+</addon>
