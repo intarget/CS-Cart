@@ -20,4 +20,3 @@ if ($mode == 'view' || $mode == 'quick_view') {
         </script>
     ";
 }
-
