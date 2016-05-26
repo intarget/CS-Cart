@@ -18,13 +18,9 @@
                         <type>info</type>
                         <handler>fn_intarget_decs</handler>
                     </item>
-                    <item id="intarget_email">
-                        <type>input</type>
-                        <default_value/>
-                    </item>
-                    <item id="intarget_apikey">
-                        <type>input</type>
-                        <default_value/>
+                    <item id="connect">
+                        <type>template</type>
+                        <default_value>connect.tpl</default_value>
                     </item>
                     <item id="intarget_help1">
                         <type>info</type>

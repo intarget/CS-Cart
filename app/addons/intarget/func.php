@@ -15,16 +15,6 @@ use Tygh\Registry;
 use Tygh\Http;
 use Tygh\Mailer;
 
-function fn_intarget_intarget_reg_info() {
-    $storefront_url = fn_get_storefront_url(fn_get_storefront_protocol());
-    if (!empty($storefront_url)) {
-        return __('intarget.auth', array('[http_location]' => $storefront_url, '[reg_intarget]' => fn_url('intarget.auth'),));
-
-    } else {
-        return __('intarget.text_fill_fields');
-    }
-}
-
 function fn_intarget_decs() {
     return __('intarget.intarget_desc');
 }
@@ -50,22 +40,23 @@ function fn_intarget_get_reg($email, $key, $url) {
         return false;
     }
     $ch = curl_init();
-    $jsondata = json_encode(array('email' => $email, 'key' => $key, 'url' => $url, 'cms' => 'wordpress'));
+    $jsondata = json_encode(array('email' => $email, 'key' => $key, 'url' => $url, 'cms' => 'cscart'));
     $options = array(CURLOPT_HTTPHEADER => array('Content-Type:application/json', 'Accept: application/json'), CURLOPT_URL => "http://intarget-dev.lembrd.com/" . "/api/registration.json", CURLOPT_POST => 1, CURLOPT_POSTFIELDS => $jsondata, CURLOPT_RETURNTRANSFER => true,);
     curl_setopt_array($ch, $options);
     $json_result = json_decode(curl_exec($ch));
     curl_close($ch);
-    if (isset($json_result->status)) {
-        if (($json_result->status == 'OK') && (isset($json_result->payload))) {
-        } elseif ($json_result->status = 'error') {
-        }
-    }
     return $json_result;
 }
 
+function fn_intarget_id()
+{
+    $intarget_id = db_get_row("SELECT * FROM ?:intarget");
+    return intval($intarget_id['project_id']);
+}
+
+
 function fn_intarget_script() {
-    $id = db_get_row("SELECT * FROM ?:intarget");
-    $id = $id['project_id'];
+    $id = fn_intarget_id();
     return '
   <script type="text/javascript">
     (function(d, w, c) {

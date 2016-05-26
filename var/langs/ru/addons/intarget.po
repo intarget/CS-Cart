@@ -20,6 +20,14 @@ msgctxt "Languages::intarget.intarget_desc"
 msgid "Try inTarget eCommerce"
 msgstr "Оцените принципиально новый подход к просмотру статистики. Общайтесь со своей аудиторией, продавайте лучше, зарабатывайте больше. И все это бесплатно!"
 
+msgctxt "Languages::apikey"
+msgid "API Key"
+msgstr "Ключ API"
+
+msgctxt "Languages::intarget_connect"
+msgid "Auth"
+msgstr "Авторизация"
+
 msgctxt "Languages::intarget.intarget_help1"
 msgid "Input values from <a href=\"https://intarget.ru\" \">inTarget</a>"
 msgstr "Введите email и ключ API из личного кабинета <a href=\"https://intarget.ru\" \">inTarget</a>"
