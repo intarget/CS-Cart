@@ -33,3 +33,16 @@ if ($mode == 'delete') {
         </script>
     ";
 }
+
+
+$ivc = "<script>
+        (function(w, c) {
+            w[c] = w[c] || [];
+            w[c].push(function(inTarget) {
+                inTarget.event('success-order');
+                alert('success-order');
+            });
+        })(window, 'inTargetCallbacks');
+        </script>
+    ";
+Tygh::$app['view']->assign('intarget_success_order', $ivc);
