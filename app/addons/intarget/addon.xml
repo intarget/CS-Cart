@@ -22,22 +22,6 @@
                         <type>template</type>
                         <default_value>connect.tpl</default_value>
                     </item>
-                    <item id="intarget_help1">
-                        <type>info</type>
-                        <handler>fn_intarget_help1</handler>
-                    </item>
-                    <item id="intarget_help2">
-                        <type>info</type>
-                        <handler>fn_intarget_help2</handler>
-                    </item>
-                    <item id="intarget_help3">
-                        <type>info</type>
-                        <handler>fn_intarget_help3</handler>
-                    </item>
-                    <item id="intarget_help4">
-                        <type>info</type>
-                        <handler>fn_intarget_help4</handler>
-                    </item>
                 </items>
             </section>
         </sections>
