@@ -19,22 +19,6 @@ function fn_intarget_decs() {
     return __('intarget.intarget_desc');
 }
 
-function fn_intarget_help1() {
-    return __('intarget.intarget_help1');
-}
-
-function fn_intarget_help2() {
-    return __('intarget.intarget_help2');
-}
-
-function fn_intarget_help3() {
-    return __('intarget.intarget_help3');
-}
-
-function fn_intarget_help4() {
-    return __('intarget.intarget_help4');
-}
-
 function fn_intarget_get_reg($email, $key, $url) {
     if (($email == '') OR ($key == '') OR ($url == '')) {
         return false;

@@ -42,6 +42,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 } elseif ($mode == 'update') {
     if ($_REQUEST['addon'] == 'intarget') {
-//        Tygh::$app['view']->assign('intarget_id', fn_intarget_id());
+        Tygh::$app['view']->assign('intarget_id', fn_intarget_id());
     }
 }

@@ -14,7 +14,7 @@ if ($mode == 'add') {
             w[c] = w[c] || [];
             w[c].push(function(inTarget) {
                 inTarget.event('add-to-cart');
-                alert('add-to-cart');
+                console.log('add-to-cart');
             });
         })(window, 'inTargetCallbacks');
         </script>
@@ -27,22 +27,9 @@ if ($mode == 'delete') {
             w[c] = w[c] || [];
             w[c].push(function(inTarget) {
                 inTarget.event('del-from-cart');
-                alert('del-from-cart');
+                console.log('del-from-cart');
             });
         })(window, 'inTargetCallbacks');
         </script>
     ";
 }
-
-
-$ivc = "<script>
-        (function(w, c) {
-            w[c] = w[c] || [];
-            w[c].push(function(inTarget) {
-                inTarget.event('success-order');
-                alert('success-order');
-            });
-        })(window, 'inTargetCallbacks');
-        </script>
-    ";
-Tygh::$app['view']->assign('intarget_success_order', $ivc);
