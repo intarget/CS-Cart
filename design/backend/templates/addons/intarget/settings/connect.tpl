@@ -33,10 +33,14 @@
             </div>
         </div>
 
-            <p>{__("intarget.intarget_help1")}</p>
-            <p>{__('intarget.intarget_help2')}</p>
-            <p>{__('intarget.intarget_help3')}</p>
-            <p>{__('intarget.intarget_help4')}</p>
+            <p>{__("intarget.help1")}</p>
+            <p>{__('intarget.help2')}</p>
+            <p>{__('intarget.help3')}</p>
+            <p>{__('intarget.help4')}</p>
+        {/if}
+
+        {if $intarget_id}
+            <p>{__("intarget.success")}</p>
         {/if}
     </div>
 

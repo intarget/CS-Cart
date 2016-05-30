@@ -9,7 +9,7 @@ use Tygh\Registry;
  * Выводит скрипт inTarget на сайт
  */
 if ($mode == 'view') {
-    echo "<script>
+    echo "<script type='text/javascript'>
         (function(w, c) {
             w[c] = w[c] || [];
             w[c].push(function(inTarget) {
@@ -17,6 +17,5 @@ if ($mode == 'view') {
                 console.log('cat-view');
             });
         })(window, 'inTargetCallbacks');
-        </script>
-    ";
+</script>";
 }

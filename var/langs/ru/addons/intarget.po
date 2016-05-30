@@ -56,6 +56,22 @@ msgctxt "Languages::intarget.success"
 msgid "Success"
 msgstr "Поздравляем! Ваш сайт успешно привязан к аккаунту <a href=\"https://intarget.ru\" target=\"_blank\">inTarget.ru</a>."
 
+msgctxt "Languages::intarget.help1"
+msgid "Help 1"
+msgstr "Введите email и ключ API из личного кабинета <a href=\"https://intarget.ru\" target=\"_blank\">inTarget.ru</a>."
+
+msgctxt "Languages::intarget.help2"
+msgid "Help 2"
+msgstr " Если вы ещё не зарегистрировались в сервисе inTarget, то это можно сделать на нашем сайте <a href=\"https://intarget.ru\" target=\"_blank\">inTarget.ru</a>."
+
+msgctxt "Languages::intarget.help3"
+msgid "Help 3"
+msgstr "Служба технической поддержки: <a href=\"mailto:plugins@intarget.ru\" target=\"_blank\">plugins@intarget.ru</a>."
+
+msgctxt "Languages::intarget.help4"
+msgid "Help 4"
+msgstr "CS-Cart inTarget ver.1.0.0"
+
 msgctxt "Languages::intarget.error_empty_fields"
 msgid "Error Empty Fields"
 msgstr "Заполните обязательные поля!"

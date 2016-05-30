@@ -9,7 +9,7 @@ use Tygh\Registry;
  * Выводит скрипт inTarget на сайт
  */
 if ($mode == 'view') {
-    echo "<script>
+    echo "<script type='text/javascript'>
         (function(w, c) {
             w[c] = w[c] || [];
             w[c].push(function(inTarget) {
@@ -17,23 +17,16 @@ if ($mode == 'view') {
                 console.log('item-view');
             });
         })(window, 'inTargetCallbacks');
-        </script>
-    ";
+        </script>";
 }
 
 if ($mode == 'quick_view') {
     if (defined('AJAX_REQUEST')) {
         echo "<script type='text/javascript'>
-            inTarget.event('item-view');
-            console.log('item-view');
+            (function($){
+               inTarget.event('item-view');
+               console.log('item-view');
+            })($);
         </script>";
     }
-}
-
-if ($mode == 'product_notifications') {
-    fn_print_die('add');
-    echo "<script type='text/javascript'>
-            inTarget.event('add-to-cart');
-            console.log('add-to-cart');
-        </script>";
 }

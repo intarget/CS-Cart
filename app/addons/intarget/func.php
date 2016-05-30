@@ -19,6 +19,18 @@ function fn_intarget_decs() {
     return __('intarget.intarget_desc');
 }
 
+function fn_intarget_delete_cart_product(&$cart, $cart_id, $full_erase) {
+    if ($full_erase) {
+        Tygh::$app['session']['intarget']['delete'] = 'delete';
+    } else Tygh::$app['session']['intarget']['delete'] = 'false';
+}
+
+function fn_intarget_order_notification(&$order_info, &$order_statuses, &$force_notification) {
+    if (isset($order_info)) {
+        Tygh::$app['session']['intarget']['order'] = 'success';
+    }
+}
+
 function fn_intarget_get_reg($email, $key, $url) {
     if (($email == '') OR ($key == '') OR ($url == '')) {
         return false;
@@ -32,8 +44,7 @@ function fn_intarget_get_reg($email, $key, $url) {
     return $json_result;
 }
 
-function fn_intarget_id()
-{
+function fn_intarget_id() {
     $intarget_id = db_get_row("SELECT * FROM ?:intarget");
     return intval($intarget_id['project_id']);
 }
@@ -45,7 +56,7 @@ function fn_intarget_script() {
   <script type="text/javascript">
     (function(d, w, c) {
       w[c] = {
-        projectId: '. $id .'
+        projectId: ' . $id . '
       };
       var n = d.getElementsByTagName("script")[0],
       s = d.createElement("script"),
