@@ -1,55 +1,38 @@
-div[id^="content_twigmo"] .control-group > label{
+div[id^="content_intarget"] .control-group > label{
     display: inline-block;
     float: left;
 }
 
-div[id^="content_twigmo"] label{
+div[id^="content_intarget"] label{
     display: inline;
 }
 
-div[id^="content_twigmo"] .facebook-btn {
-    width: 161px;
-    height: 28px;
-    margin: 0 20px 0 0;
-    display: block;
-}
-
-div[id^="content_twigmo"] .twitter-btn {
-    width: 161px;
-    height: 28px;
-    display: block;
-}
-
-div[id^="content_twigmo"] #social_links > a{
-    float: left;
-}
-
-div[id^="content_twigmo"] .cm-failed-label {
+div[id^="content_intarget"] .cm-failed-label {
     color: #b94a48 !important;
 }
 
-div[id^="content_twigmo"] input[type=checkbox].cm-failed-field {
+div[id^="content_intarget"] input[type=checkbox].cm-failed-field {
     outline: 1px dashed #cc0;
     background-color: #fdd;
 }
 
-div[id^="content_twigmo"] .control-group .help-inline {
+div[id^="content_intarget"] .control-group .help-inline {
     display: block;
 }
 
-div[id^="content_twigmo"] .float-left{
+div[id^="content_intarget"] .float-left{
     float: left;
 }
 
-div[id^="content_twigmo"] .fileuploader {
+div[id^="content_intarget"] .fileuploader {
     margin-right: 20px;
     border: 1px solid #ebebeb;
     background-color: #f9f9f9;
     padding: 10px;
 }
 
-div[id^="content_twigmo"] .radio,
-div[id^="content_twigmo"] .checkbox{
+div[id^="content_intarget"] .radio,
+div[id^="content_intarget"] .checkbox{
     min-height: 0;
 }
 
@@ -62,17 +45,17 @@ div[id^="content_twigmo"] .checkbox{
     color: #b94a48 !important;
 }
 
-div[id^="content_twigmo"] .float-right{
+div[id^="content_intarget"] .float-right{
     float: right;
 }
 
-div[id^="content_twigmo"] .controls input[type="text"],
-div[id^="content_twigmo"] .controls select,
-div[id^="content_twigmo"] .controls input[type="password"]{
+div[id^="content_intarget"] .controls input[type="text"],
+div[id^="content_intarget"] .controls select,
+div[id^="content_intarget"] .controls input[type="password"]{
     margin-right: 5px;
 }
 
-div[id^="content_twigmo"] .checkbox-wrapper{
+div[id^="content_intarget"] .checkbox-wrapper{
     padding-top: 2px;
     display: inline-block;
 }
@@ -127,13 +110,13 @@ div[id^="content_twigmo"] .checkbox-wrapper{
     margin: 9px 12px;
     display: block;
 }
-#addon_twigmoinstalled .bg-icon,
-#addon_twigmo .bg-icon {
-    background-image: url('../../../media/images/addons/twigmo/images/addon_icon.png');
+#addon_intargetinstalled .bg-icon,
+#addon_intarget .bg-icon {
+    background-image: url('../../../media/images/addons/intarget/images/addon_icon.png');
     background-size: contain;
     border: 0px;
 }
-#addon_twigmoinstalled .bg-icon i,
-#addon_twigmo .bg-icon i {
+#addon_intargetinstalled .bg-icon i,
+#addon_intarget .bg-icon i {
     display: none;
 }
