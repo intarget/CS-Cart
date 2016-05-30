@@ -1,5 +1,5 @@
 <fieldset>
-
+    {assign var="intarget_id" value=$intarget_id|default:""}
     <div id="connect_settings">
         {if !$intarget_id}
         <input type="hidden" name="result_ids"

@@ -46,7 +46,7 @@ function fn_intarget_get_reg($email, $key, $url) {
 
 function fn_intarget_id() {
     $intarget_id = db_get_row("SELECT * FROM ?:intarget");
-    return intval($intarget_id['project_id']);
+    return ($intarget_id['project_id'])? intval($intarget_id['project_id']) : '';
 }
 
 
