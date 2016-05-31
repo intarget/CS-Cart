@@ -46,12 +46,10 @@ function fn_intarget_get_reg($email, $key, $url) {
 
 function fn_intarget_id() {
     $intarget_id = db_get_row("SELECT * FROM ?:intarget");
-    return ($intarget_id['project_id'])? intval($intarget_id['project_id']) : '';
+    return !empty($intarget_id) ? intval($intarget_id['project_id']) : '';
 }
 
-
-function fn_intarget_script() {
-    $id = fn_intarget_id();
+function fn_intarget_script($id) {
     return '
   <script type="text/javascript">
     (function(d, w, c) {

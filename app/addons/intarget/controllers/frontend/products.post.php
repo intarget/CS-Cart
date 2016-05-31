@@ -9,15 +9,7 @@ use Tygh\Registry;
  * Выводит скрипт inTarget на сайт
  */
 if ($mode == 'view') {
-    echo "<script type='text/javascript'>
-        (function(w, c) {
-            w[c] = w[c] || [];
-            w[c].push(function(inTarget) {
-                inTarget.event('item-view');
-                console.log('item-view');
-            });
-        })(window, 'inTargetCallbacks');
-        </script>";
+    Tygh::$app['session']['intarget']['iview'] = 'success';
 }
 
 if ($mode == 'quick_view') {
