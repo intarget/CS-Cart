@@ -6,7 +6,7 @@ if (!defined('BOOTSTRAP')) {
 use Tygh\Registry;
 
 /*
- * Выводит скрипт inTarget на сайт
+ * Р’С‹РІРѕРґРёС‚ СЃРєСЂРёРїС‚ inTarget РЅР° СЃР°Р№С‚
  */
 if ($mode == 'view') {
     Tygh::$app['session']['intarget']['cview'] = 'success';
