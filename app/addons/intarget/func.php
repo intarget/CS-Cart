@@ -21,14 +21,38 @@ function fn_intarget_decs() {
 
 function fn_intarget_delete_cart_product(&$cart, $cart_id, $full_erase) {
     if ($full_erase) {
-        Tygh::$app['session']['intarget']['delete'] = 'delete';
-    } else Tygh::$app['session']['intarget']['delete'] = 'false';
+        $intarget_del = "(function(w, c) {
+            w[c] = w[c] || [];
+            w[c].push(function(inTarget) {
+                inTarget.event('del-from-cart');
+                console.log('del-from-cart');
+            });
+        })(window, 'inTargetCallbacks');";
+        Tygh::$app['view']->assign('intarget_del', $intarget_del);
+    }
 }
-
 function fn_intarget_order_notification(&$order_info, &$order_statuses, &$force_notification) {
     if (isset($order_info)) {
-        Tygh::$app['session']['intarget']['order'] = 'success';
+        $order_success = "(function(w, c) {
+            w[c] = w[c] || [];
+            w[c].push(function(inTarget) {
+                inTarget.event('success-order');
+                console.log('success-order');
+            });
+        })(window, 'inTargetCallbacks');";
+        Tygh::$app['view']->assign('intarget_sorder', $order_success);
     }
+}
+
+function fn_intarget_add_to_cart(&$cart, &$product_id, &$cart_id) {
+    $intarget_add = "(function(w, c) {
+            w[c] = w[c] || [];
+            w[c].push(function(inTarget) {
+                inTarget.event('add-to-cart');
+                console.log('add-to-cart-ajax');
+            });
+        })(window, 'inTargetCallbacks');";
+    Tygh::$app['view']->assign('intarget_ajax_add', $intarget_add);
 }
 
 function fn_intarget_get_reg($email, $key, $url) {
@@ -51,7 +75,6 @@ function fn_intarget_id() {
 
 function fn_intarget_script($id) {
     return '
-  <script type="text/javascript">
     (function(d, w, c) {
       w[c] = {
         projectId: ' . $id . '
@@ -66,6 +89,5 @@ function fn_intarget_script($id) {
           d.addEventListener("DOMContentLoaded", f, false);
       } else { f(); }
 
-    })(document, window, "inTargetInit");
-  </script>';
+    })(document, window, "inTargetInit");';
 }

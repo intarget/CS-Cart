@@ -5,9 +5,13 @@ if (!defined('BOOTSTRAP')) {
 }
 use Tygh\Registry;
 
-/*
- * Выводит скрипт inTarget на сайт
- */
 if ($mode == 'view') {
-    Tygh::$app['session']['intarget']['cview'] = 'success';
+    $cat_view = "(function(w, c) {
+            w[c] = w[c] || [];
+            w[c].push(function(inTarget) {
+                inTarget.event('cat-view');
+                console.log('cat-view');
+            });
+        })(window, 'inTargetCallbacks');";
+    Tygh::$app['view']->assign('intarget_cview', $cat_view);
 }

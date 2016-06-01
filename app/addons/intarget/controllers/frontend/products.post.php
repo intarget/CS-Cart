@@ -9,16 +9,25 @@ use Tygh\Registry;
  * Выводит скрипт inTarget на сайт
  */
 if ($mode == 'view') {
-    Tygh::$app['session']['intarget']['iview'] = 'success';
+    $item_view = "(function(w, c) {
+            w[c] = w[c] || [];
+            w[c].push(function(inTarget) {
+                inTarget.event('item-view');
+                console.log('item-view');
+            });
+        })(window, 'inTargetCallbacks')";
+    Tygh::$app['view']->assign('intarget_iview', $item_view);
 }
 
 if ($mode == 'quick_view') {
     if (defined('AJAX_REQUEST')) {
-        echo "<script type='text/javascript'>
-            (function($){
-               inTarget.event('item-view');
-               console.log('item-view');
-            })($);
-        </script>";
+        $item_view = "(function(w, c) {
+            w[c] = w[c] || [];
+            w[c].push(function(inTarget) {
+                inTarget.event('item-view');
+                console.log('ajax-item-view');
+            });
+        })(window, 'inTargetCallbacks')";
+        Tygh::$app['view']->assign('intarget_aiview', $item_view);
     }
 }

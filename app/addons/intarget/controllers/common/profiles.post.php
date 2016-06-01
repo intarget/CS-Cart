@@ -7,5 +7,12 @@ if (!defined('BOOTSTRAP')) {
 }
 
 if ($mode == 'add') {
-    Tygh::$app['session']['intarget']['register'] = 'success';
+    $intarget_reg = "(function(w, c) {
+        w[c] = w[c] || [];
+            w[c].push(function(inTarget) {
+            inTarget.event('user-reg');
+            console.log('user-reg');
+        });
+        })(window, 'inTargetCallbacks')";
+    Tygh::$app['view']->assign('intarget_reg', $intarget_reg);
 }
