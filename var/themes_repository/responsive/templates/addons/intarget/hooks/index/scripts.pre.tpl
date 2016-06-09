@@ -1,3 +1,4 @@
+{script src="js/addons/intarget/func.js"}
 <script type="text/javascript">
     //<![CDATA[
     {if $intarget}
@@ -12,16 +13,8 @@
     {$intarget_iview nofilter}
     {/if}
 
-    {if isset($intarget_aiview)}
-    {$intarget_aiview nofilter}
-    {/if}
-
     {if isset($intarget_sorder)}
     {$intarget_sorder nofilter}
-    {/if}
-
-    {if isset($intarget_ajax_add)}
-    {$intarget_ajax_add nofilter}
     {/if}
 
     {if isset($intarget_del)}
