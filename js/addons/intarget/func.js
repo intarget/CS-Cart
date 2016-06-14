@@ -10,4 +10,4 @@
             console.log('ajax-item-view');
         }
     });
-}(Tygh, jQuery));
+})(Tygh, Tygh.$);
