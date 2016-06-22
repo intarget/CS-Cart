@@ -21,7 +21,7 @@ function fn_intarget_decs() {
 
 function fn_intarget_set_admin_notification()
 {
-    if (!empty(fn_intarget_id())) {
+    if (empty(fn_intarget_id())) {
         $message = __('intarget_connect_notification', array('[addon_link]' => fn_url('addons.update&addon=intarget')));
         fn_set_notification('N', __('notice'), $message, 'S');
     }
