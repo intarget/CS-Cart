@@ -37,10 +37,6 @@
                 {include file="buttons/button.tpl" but_role="submit" but_meta="btn-primary cm-skip-avail-switch" but_name="dispatch[addons.intarget_connect]" but_text=__("intarget_connect") but_target_id="connect_settings"}
             </div>
         </div>
-        {if !($intarget_id)}
-            <p>{__("intarget.help1")}</p>
-            <p>{__('intarget.help2')}</p>
-        {/if}
         {if $intarget_id}
             <p>{__('intarget.help5')}</p>
         {/if}
