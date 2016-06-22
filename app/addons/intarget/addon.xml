@@ -26,10 +26,15 @@
             </section>
         </sections>
     </settings>
+    <language_variables>
+        <item lang="ru" id="intarget_connect_notification"><![CDATA[В настоящий момент <a href="[addon_link]">модуль inTarget</a> не подключён. Настройте этот модуль, указав ваш Email и Ключ API с сайта <a href="https://intarget.ru" target="_blank">inTarget</a> в настройках модуля."]]></item>
+    </language_variables>
     <queries>
         <item for="install">
             CREATE TABLE `?:intarget` (
             `project_id` int(11) unsigned NOT NULL,
+            `email` varchar(20),
+            `key` varchar(40),
             PRIMARY KEY (`project_id`)
             ) Engine=MyISAM DEFAULT CHARSET UTF8;
         </item>

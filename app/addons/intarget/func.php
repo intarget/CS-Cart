@@ -19,6 +19,14 @@ function fn_intarget_decs() {
     return __('intarget.intarget_desc');
 }
 
+function fn_intarget_set_admin_notification()
+{
+    if (!empty(fn_intarget_id())) {
+        $message = __('intarget_connect_notification', array('[addon_link]' => fn_url('addons.update&addon=intarget')));
+        fn_set_notification('N', __('notice'), $message, 'S');
+    }
+}
+
 function fn_intarget_delete_cart_product(&$cart, $cart_id, $full_erase) {
     if ($full_erase) {
         $intarget_del = "(function(w, c) {
@@ -52,7 +60,7 @@ function fn_intarget_add_to_cart(&$cart, &$product_id, &$cart_id) {
                 console.log('add-to-cart-ajax');
             });
         })(window, 'inTargetCallbacks');";
-    Tygh::$app['view']->assign('intarget_ajax_add', $intarget_add);
+    Tygh::$app['view']->assign('intarget_add', $intarget_add);
 }
 
 function fn_intarget_get_reg($email, $key, $url) {
@@ -71,6 +79,16 @@ function fn_intarget_get_reg($email, $key, $url) {
 function fn_intarget_id() {
     $intarget_id = db_get_row("SELECT * FROM ?:intarget");
     return !empty($intarget_id) ? intval($intarget_id['project_id']) : '';
+}
+
+function fn_intarget_email() {
+    $intarget_id = db_get_row("SELECT * FROM ?:intarget");
+    return !empty($intarget_id) ? ($intarget_id['email']) : '';
+}
+
+function fn_intarget_key() {
+    $intarget_id = db_get_row("SELECT * FROM ?:intarget");
+    return !empty($intarget_id) ? ($intarget_id['key']) : '';
 }
 
 function fn_intarget_script($id) {

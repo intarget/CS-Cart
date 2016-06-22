@@ -16,6 +16,10 @@ msgctxt "Languages::intarget.auth"
 msgid "<a id=\"auth\" class=\"cm-ajax cm-comet btn btn-primary\" href=\"[reg_intarget]&url=[http_location]\" style=\"text-align:center;\">Auth</a>"
 msgstr "<a id=\"auth\" class=\"cm-ajax cm-comet btn btn-primary\" href=\"[reg_intarget]&url=[http_location]\"  style=\"text-align:center;\">Авторизация</a>"
 
+msgctxt "Languages::intarget_connect_notification"
+msgid "The <a href=\"[addon_link]\">inTarget</a> is not connected to the <a href=\"https://intarget.ru\" target=\"_blank\">inTarget service</a>. Set it up to enable."
+msgstr "В настоящий момент <a href=\"[addon_link]\">модуль inTarget</a> не подключён. Настройте этот модуль, указав ваш Email и Ключ API с сайта <a href=\"https://intarget.ru\" target=\"_blank\">inTarget</a> в настройках модуля."
+
 msgctxt "Languages::intarget.intarget_desc"
 msgid "Try inTarget eCommerce"
 msgstr "Оцените принципиально новый подход к просмотру статистики. Общайтесь со своей аудиторией, продавайте лучше, зарабатывайте больше. И все это бесплатно!"
@@ -71,6 +75,10 @@ msgstr "Служба технической поддержки: <a href=\"mailto
 msgctxt "Languages::intarget.help4"
 msgid "Help 4"
 msgstr "CS-Cart inTarget ver.1.0.0"
+
+msgctxt "Languages::intarget.help5"
+msgid "Help 5"
+msgstr "Войдите в личный кабинет <a href=\"https://intarget.ru\" target=\"_blank\">inTarget.ru</a> для просмотра статистики."
 
 msgctxt "Languages::intarget.error_empty_fields"
 msgid "Error Empty Fields"
