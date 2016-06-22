@@ -18,10 +18,3 @@ if ($mode == 'view') {
         })(window, 'inTargetCallbacks')";
     Tygh::$app['view']->assign('intarget_iview', $item_view);
 }
-
-
-if ($mode == 'quick_view') {
-    if (defined('AJAX_REQUEST')) {
-        Tygh::$app['session']['intarget_view_item'] = true;
-    }
-}

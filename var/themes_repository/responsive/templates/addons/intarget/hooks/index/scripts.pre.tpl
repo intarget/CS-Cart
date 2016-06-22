@@ -40,7 +40,7 @@
             w[c] = w[c] || [];
             w[c].push(function(inTarget) {
                 inTarget.event('add-to-cart');
-                alert('add-to-cart');
+                console.log('add-to-cart');
             });
         })(window, 'inTargetCallbacks');
         document.cookie = 'INTARGET_ADD=N; path=/;';
@@ -51,7 +51,7 @@
             w[c] = w[c] || [];
             w[c].push(function(inTarget) {
                 inTarget.event('item-view');
-                alert('item-view');
+                console.log('item-view');
             });
         })(window, 'inTargetCallbacks');
         document.cookie = 'INTARGET_IVIEW=N; path=/;';
