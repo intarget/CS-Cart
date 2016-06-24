@@ -7,12 +7,5 @@ if (!defined('BOOTSTRAP')) {
 }
 
 if ($mode == 'add') {
-    $intarget_reg = "(function(w, c) {
-        w[c] = w[c] || [];
-            w[c].push(function(inTarget) {
-            inTarget.event('user-reg');
-            console.log('user-reg');
-        });
-        })(window, 'inTargetCallbacks')";
-    Tygh::$app['view']->assign('intarget_reg', $intarget_reg);
+    setcookie('INTARGET_REG', 'Y', '', '/');
 }

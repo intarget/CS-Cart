@@ -7,8 +7,5 @@ if (!defined('BOOTSTRAP')) {
 }
 
 fn_register_hooks(
-    'add_to_cart',
-    'order_notification',
-    'delete_cart_product',
-    'set_admin_notification'
+    'delete_cart_product'
 );

@@ -1,11 +1,22 @@
 (function (_, $) {
     $(document).on('click', 'button[type=submit][name^="dispatch[checkout.add"]', function () {
-        document.cookie = "INTARGET_ADD=Y; path=/;";
-        console.log('cookie-add-to-cart');
+        if (!($(this).prop('name').match('checkout.add_'))) {
+            $.ceEvent('one', 'ce.formajaxpost_' + $(this).parents('form').prop('name'), function (form, elm) {
+                document.cookie = "INTARGET_ADD=Y; path=/;";
+                console.log('cookie-ajax-add-to-cart');
+            });
+        };
+    });
+
+    $(document).on('click', 'button[name^="dispatch[checkout.add_profile"]', function () {
+        $.ceEvent('one', 'ce.formajaxpost_' + $(this).parents('form').prop('name'), function (form, elm) {
+            document.cookie = "INTARGET_REG=Y; path=/;";
+            console.log('cookie-user-reg');
+        });
     });
 
     $.ceEvent('on', 'ce.ajaxdone', function (elms, inline_scripts, params, data) {
-        if (data['html']['product_quick_view']) {
+        if (typeof data['html'] == 'object' && data['html']['product_quick_view']) {
             document.cookie = "INTARGET_IVIEW=Y; path=/;";
             console.log('cookie-ajax-item-view');
         }
