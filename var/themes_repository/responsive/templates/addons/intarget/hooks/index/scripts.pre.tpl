@@ -30,7 +30,7 @@
         document.cookie = 'INTARGET_ADD=N; path=/;';
     }
 
-    var intarget_del = getCookie('INTARGET_DEL');
+    var intarget_del = getCookie('INTARGET_DELETE');
     if(intarget_del && intarget_del == 'Y') {
         (function(w, c) {
             w[c] = w[c] || [];
@@ -39,7 +39,7 @@
                 console.log('del-from-cart');
             });
         })(window, 'inTargetCallbacks');
-        document.cookie = 'INTARGET_DEL=N; path=/;';
+        document.cookie = 'INTARGET_DELETE=N; path=/;';
     }
 
     var intarget_iview = getCookie('INTARGET_IVIEW');

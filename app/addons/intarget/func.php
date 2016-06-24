@@ -21,7 +21,7 @@ function fn_intarget_decs() {
 
 function fn_intarget_delete_cart_product(&$cart, $cart_id, $full_erase) {
     if ($full_erase) {
-        setcookie('INTARGET_DEL', 'Y', '', '/');
+        setcookie('INTARGET_DELETE', 'Y');
     }
 }
 
@@ -31,14 +31,7 @@ function fn_intarget_get_reg($email, $key, $url) {
     }
     $ch = curl_init();
     $jsondata = json_encode(array('email' => $email, 'key' => $key, 'url' => $url, 'cms' => 'cscart'));
-    $options = array(
-        CURLOPT_HTTPHEADER => array('Content-Type:application/json',
-            'Accept: application/json'),
-        CURLOPT_URL => "https://intarget.ru/" . "/api/registration.json",
-        CURLOPT_POST => 1,
-        CURLOPT_POSTFIELDS => $jsondata,
-        CURLOPT_RETURNTRANSFER => true
-    );
+    $options = array(CURLOPT_HTTPHEADER => array('Content-Type:application/json', 'Accept: application/json'), CURLOPT_URL => "https://intarget.ru/" . "/api/registration.json", CURLOPT_POST => 1, CURLOPT_POSTFIELDS => $jsondata, CURLOPT_RETURNTRANSFER => true);
     curl_setopt_array($ch, $options);
     $json_result = json_decode(curl_exec($ch));
     curl_close($ch);
