@@ -32,21 +32,25 @@ msgctxt "Languages::intarget_connect"
 msgid "Auth"
 msgstr "Авторизация"
 
-msgctxt "Languages::intarget.intarget_help1"
+msgctxt "Languages::intarget.help1"
 msgid "Input values from <a href=\"https://intarget.ru\" \">inTarget</a>"
 msgstr "Введите email и ключ API из личного кабинета <a href=\"https://intarget.ru\" \">inTarget</a>"
 
-msgctxt "Languages::intarget.intarget_help2"
+msgctxt "Languages::intarget.help2"
 msgid "Registration in <a href=\"https://intarget.ru\" target=\"_blank\">inTarget.ru</a>"
 msgstr "Если вы ещё не зарегистрировались в сервисе inTarget это можно сделать по ссылке <a href=\"https://intarget.ru\" target=\"_blank\">inTarget.ru</a>"
 
-msgctxt "Languages::intarget.intarget_help3"
+msgctxt "Languages::intarget.help3"
 msgid "TechSupport <a href=\"mailto:plugins@intarget.ru\">plugins@intarget.ru</a>"
 msgstr "Служба технической поддержки <a href=\"mailto:plugins@intarget.ru\">plugins@intarget.ru</a>"
 
-msgctxt "Languages::intarget.intarget_help4"
-msgid "CS-Cart inTarget ver.1.0.0"
-msgstr "CS-Cart inTarget ver.1.0.0"
+msgctxt "Languages::intarget.help4"
+msgid "CS-Cart inTarget"
+msgstr "CS-Cart inTarget"
+
+msgctxt "Languages::intarget.help5"
+msgid "Help 5"
+msgstr "Войдите в личный кабинет <a href=\"https://intarget.ru\" target=\"_blank\">inTarget.ru</a> для просмотра статистики."
 
 msgctxt "Languages::intarget_auth_error"
 msgid "Auth Error"
@@ -59,26 +63,6 @@ msgstr "inTarget"
 msgctxt "Languages::intarget.success"
 msgid "Success"
 msgstr "Поздравляем! Ваш сайт успешно привязан к аккаунту <a href=\"https://intarget.ru\" target=\"_blank\">inTarget.ru</a>."
-
-msgctxt "Languages::intarget.help1"
-msgid "Help 1"
-msgstr "Введите email и ключ API из личного кабинета <a href=\"https://intarget.ru\" target=\"_blank\">inTarget.ru</a>."
-
-msgctxt "Languages::intarget.help2"
-msgid "Help 2"
-msgstr " Если вы ещё не зарегистрировались в сервисе inTarget, то это можно сделать на нашем сайте <a href=\"https://intarget.ru\" target=\"_blank\">inTarget.ru</a>."
-
-msgctxt "Languages::intarget.help3"
-msgid "Help 3"
-msgstr "Служба технической поддержки: <a href=\"mailto:plugins@intarget.ru\" target=\"_blank\">plugins@intarget.ru</a>."
-
-msgctxt "Languages::intarget.help4"
-msgid "Help 4"
-msgstr "CS-Cart inTarget ver.1.0.0"
-
-msgctxt "Languages::intarget.help5"
-msgid "Help 5"
-msgstr "Войдите в личный кабинет <a href=\"https://intarget.ru\" target=\"_blank\">inTarget.ru</a> для просмотра статистики."
 
 msgctxt "Languages::intarget.error_empty_fields"
 msgid "Error Empty Fields"
