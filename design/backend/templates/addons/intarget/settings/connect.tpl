@@ -15,7 +15,7 @@
                    for="elm_intarget_email">{__("email")}:</label>
 
             <div class="controls">
-                <input type="text" id="elm_tw_email" name="intarget[email]"
+                <input type="text" id="elm_intarget_email" name="intarget[email]"
                        value="{$intarget_email}" class="input-text-large"
                        size="60"/ {if $intarget_id}disabled="disabled"{/if}>
                 {if $intarget_id}<img src="{$images_dir}/addons/intarget/images/ok.png">{/if}

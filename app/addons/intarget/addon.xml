@@ -10,7 +10,7 @@
     <compatibility>
         <conflicts></conflicts>
     </compatibility>
-    <settings>
+    <settings layout="separate" edition_type="ROOT,ULT:VENDOR">
         <sections>
             <section id="general">
                 <items>
