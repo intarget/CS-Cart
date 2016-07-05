@@ -17,7 +17,7 @@
             <div class="controls">
                 <input type="text" id="elm_intarget_email" name="intarget[email]"
                        value="{$intarget_email}" class="input-text-large"
-                       size="60"/ {if $intarget_id}disabled="disabled"{/if}>
+                       size="60" {if $intarget_id}disabled="disabled"{/if}/>
                 {if $intarget_id}<img src="{$images_dir}/addons/intarget/images/ok.png">{/if}
             </div>
         </div>
@@ -28,7 +28,7 @@
             <div class="controls">
                 <input type="text" id="elm_intarget_password" name="intarget[apikey]"
                        class="input-text-large" size="32" maxlength="32" value="{$intarget_key}"
-                       autocomplete="off"/ {if $intarget_id}disabled="disabled"{/if}>
+                       autocomplete="off" {if $intarget_id}disabled="disabled"{/if}/>
                 {if $intarget_id}<img src="{$images_dir}/addons/intarget/images/ok.png">{/if}
             </div>
         </div>

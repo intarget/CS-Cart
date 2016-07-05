@@ -7,9 +7,7 @@
     <status>active</status>
     <default_language>ru</default_language>
     <auto_install>MULTIVENDOR,ULTIMATE</auto_install>
-    <compatibility>
-        <conflicts></conflicts>
-    </compatibility>
+
     <settings layout="separate" edition_type="ROOT,ULT:VENDOR">
         <sections>
             <section id="general">
